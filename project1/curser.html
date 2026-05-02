@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cursor Snake Catcher</title>
+	<link rel="stylesheet" href="curser.css">
+</head>
+<body>
+	<main class="game-shell">
+		<header class="topbar">
+			<div>
+				<h1>Cursor Snake Catcher</h1>
+				<p class="subtitle">Catch rogue neon snakes with your energy net. Fast hands win.</p>
+			</div>
+			<div class="actions">
+				<button id="startBtn">Start</button>
+				<button id="pauseBtn" disabled>Pause</button>
+				<button id="restartBtn" disabled>Restart</button>
+			</div>
+		</header>
+
+		<section class="hud">
+			<article>
+				<h2>Score</h2>
+				<p id="score">0</p>
+			</article>
+			<article>
+				<h2>Best</h2>
+				<p id="bestScore">0</p>
+			</article>
+			<article>
+				<h2>Health</h2>
+				<p id="health">5</p>
+			</article>
+			<article>
+				<h2>Level</h2>
+				<p id="level">1</p>
+			</article>
+			<article>
+				<h2>Time</h2>
+				<p id="time">90</p>
+			</article>
+			<article class="wide">
+				<h2>Net Charge</h2>
+				<div class="meter"><span id="chargeBar"></span></div>
+			</article>
+		</section>
+
+		<section class="arena-wrap">
+			<canvas id="gameCanvas" width="960" height="560" aria-label="Cursor Snake Catcher game"></canvas>
+			<div id="overlay" class="overlay show">
+				<div class="panel">
+					<h3>How to Play</h3>
+					<ul>
+						<li>Move your mouse to guide the cursor orb.</li>
+						<li>Hold left mouse button to activate the net.</li>
+						<li>Catch the giant dragon head while the net is active.</li>
+						<li>Avoid bites. Survive 90 seconds.</li>
+					</ul>
+					<p>Press <strong>P</strong> to pause/resume.</p>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<script src="curser.js"></script>
+</body>
+</html>
+
