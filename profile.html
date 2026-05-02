@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Profile</title>
+  <style>
+    :root {
+      --bg: #f4f7fb;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --primary: #2563eb;
+      --primary-soft: #dbeafe;
+      --border: #e5e7eb;
+      --shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: linear-gradient(180deg, #eef4ff 0%, var(--bg) 100%);
+      min-height: 100vh;
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      max-width: 950px;
+      margin: 0 auto;
+    }
+
+    .profile-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .cover {
+      height: 180px;
+      background: linear-gradient(120deg, #215de0, #7c3aed);
+    }
+
+    .profile-main {
+      padding: 0 2rem 2rem;
+      position: relative;
+    }
+
+    .avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 5px solid #fff;
+      background: linear-gradient(160deg, #dbeafe, #c7d2fe);
+      display: grid;
+      place-items: center;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #1e3a8a;
+      margin-top: -60px;
+    }
+
+    .top {
+      display: flex;
+      gap: 1.25rem;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-top: 0.8rem;
+    }
+
+    .name-role h1 {
+      margin: 0;
+      font-size: 1.85rem;
+    }
+
+    .name-role p {
+      margin: 0.35rem 0 0;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    .badge {
+      background: var(--primary-soft);
+      color: var(--primary);
+      border-radius: 999px;
+      padding: 0.45rem 0.9rem;
+      font-size: 0.85rem;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .bio {
+      margin: 1.25rem 0 1.6rem;
+      color: #374151;
+      line-height: 1.7;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.8rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .info-item {
+      background: #f9fafb;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 0.9rem;
+    }
+
+    .info-item h3 {
+      margin: 0;
+      font-size: 0.85rem;
+      color: var(--muted);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .info-item p {
+      margin: 0.45rem 0 0;
+      font-weight: 600;
+    }
+
+    .skills-section {
+      border-top: 1px solid var(--border);
+      padding-top: 1.25rem;
+    }
+
+    .skills-section h2 {
+      margin: 0 0 0.8rem;
+      font-size: 1.35rem;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+    }
+
+    .skill {
+      background: #eff6ff;
+      color: #1d4ed8;
+      border: 1px solid #bfdbfe;
+      border-radius: 999px;
+      padding: 0.45rem 0.85rem;
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    @media (max-width: 780px) {
+      .profile-main {
+        padding: 0 1.1rem 1.3rem;
+      }
+
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .name-role h1 {
+        font-size: 1.55rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <section class="profile-card">
+      <div class="cover"></div>
+
+      <div class="profile-main">
+        <div class="avatar">JD</div>
+
+        <div class="top">
+          <div class="name-role">
+            <h1>Your Name</h1>
+            <p>Web Developer • Student</p>
+          </div>
+          <span class="badge">Open to Work</span>
+        </div>
+
+        <p class="bio">
+          Hello! I am a passionate developer who enjoys building clean, responsive, and user-friendly websites.
+          I love learning new technologies and turning ideas into real digital products.
+        </p>
+
+        <div class="info-grid">
+          <article class="info-item">
+            <h3>Email</h3>
+            <p>yourname@email.com</p>
+          </article>
+          <article class="info-item">
+            <h3>Location</h3>
+            <p>Your City, Country</p>
+          </article>
+          <article class="info-item">
+            <h3>Experience</h3>
+            <p>2+ Years</p>
+          </article>
+        </div>
+
+        <div class="skills-section">
+          <h2>My Skills</h2>
+          <div class="skills">
+            <span class="skill">HTML</span>
+            <span class="skill">CSS</span>
+            <span class="skill">Responsive Design</span>
+            <span class="skill">UI/UX Basics</span>
+            <span class="skill">JavaScript</span>
+            <span class="skill">Git & GitHub</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

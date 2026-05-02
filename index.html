@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luxe Aura Perfumes</title>
+  <meta name="description" content="An elegant perfume showcase with filtering, favorites, and interactive effects." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-glow" aria-hidden="true" ></div>
+
+  <header class="site-header" id="top">
+    <nav class="nav container">
+      <a class="logo" href="#top">Luxe Aura</a>
+      <div class="nav-links">
+        <a href="#collections">Collections</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <button id="themeToggle" class="theme-btn" type="button" aria-label="Toggle dark mode">🌙</button>
+      </div>
+    </nav>
+
+    <section class="hero container">
+      <div class="hero-text">
+        <p class="kicker">Luxury Fragrance House</p>
+        <h1>Perfumes That Tell Your Story</h1>
+        <p>
+          Discover handcrafted scents inspired by flowers, woods, and warm amber notes.
+          Find your signature fragrance with our interactive collection.
+        </p>
+        <a href="#collections" class="cta-btn">Explore Collection</a>
+      </div>
+      <div class="hero-card">
+        <p class="hero-card-title">Trending Scent</p>
+        <h2>Noir Velvet</h2>
+        <p>Dark rose, oud, and vanilla musk.</p>
+        <span class="price-tag">$92</span>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section id="collections" class="container section">
+      <div class="section-head">
+        <h2>Perfume Collection</h2>
+        <p>Use filters to find a scent profile that matches your mood.</p>
+      </div>
+
+      <div class="controls">
+        <input id="searchInput" type="text" placeholder="Search perfume name..." aria-label="Search perfume" />
+        <select id="noteFilter" aria-label="Filter by note">
+          <option value="all">All Notes</option>
+          <option value="floral">Floral</option>
+          <option value="woody">Woody</option>
+          <option value="fresh">Fresh</option>
+          <option value="oriental">Oriental</option>
+        </select>
+        <select id="sortSelect" aria-label="Sort perfumes">
+          <option value="default">Sort: Featured</option>
+          <option value="low-high">Price: Low to High</option>
+          <option value="high-low">Price: High to Low</option>
+          <option value="name">Name: A-Z</option>
+        </select>
+      </div>
+
+      <div id="perfumeGrid" class="perfume-grid"></div>
+    </section>
+
+    <section id="about" class="container section about">
+      <div>
+        <h2>Why Luxe Aura?</h2>
+        <p>
+          Each perfume is blended in small batches with premium oils for long-lasting elegance.
+          Our formula is cruelty-free and crafted for everyday luxury.
+        </p>
+      </div>
+      <ul>
+        <li>✓ Long-lasting performance</li>
+        <li>✓ Elegant bottle design</li>
+        <li>✓ Free shipping over $80</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="container section contact">
+      <h2>Get Fragrance Updates</h2>
+      <form id="newsletterForm" novalidate>
+        <input id="emailInput" type="email" placeholder="Enter your email" required aria-label="Email address" />
+        <button type="submit">Subscribe</button>
+      </form>
+      <p id="formMessage" class="form-message" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 Luxe Aura Perfumes. Crafted with elegance.</p>
+  </footer>
+
+  <button id="toTopBtn" class="to-top" aria-label="Back to top">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
